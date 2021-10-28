@@ -48,7 +48,7 @@ public class DemoQaTest {
         $("body > div.fade.modal.show").shouldHave(text("some adress"));
         $("body > div.fade.modal.show").shouldHave(text("NCR Delhi"));
 
-
+//
 
 
 

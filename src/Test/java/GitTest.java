@@ -21,7 +21,7 @@ public class GitTest {
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
 
 
-        sleep(5000);
+        //sleep(5000);
 
     }
 }

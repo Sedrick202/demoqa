@@ -24,8 +24,9 @@ public class DemoQaWithPageObject extends TestBase {
                 .setFile(TestData.fileName)
                 .setAddress(TestData.address)
                 .setState(TestData.state)
-                .setCity(TestData.city);
-                $("#submit").click();
+                .setCity(TestData.city)
+                .clickSubmit();
+
 
 
         regPage.checkResult(TestData.firstName)

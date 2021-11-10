@@ -22,7 +22,8 @@ public class RegPage {
             fileInput = $("#uploadPicture"),
             addressImput = $("#currentAddress"),
             stateInput = $("#react-select-3-input"),
-            cityInput = $("#react-select-4-input");
+            cityInput = $("#react-select-4-input"),
+            submitClick = $("#submit");
 
 
     public void openPage() {
@@ -91,6 +92,12 @@ public class RegPage {
 
     public RegPage setGender (String value) {
         $(new ByText(value)).click();
+
+
+        return this;
+    }
+    public RegPage clickSubmit () {
+        submitClick.click();
 
 
         return this;

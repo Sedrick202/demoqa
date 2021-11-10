@@ -1,8 +1,10 @@
+package tests;
+
 import com.github.javafaker.Faker;
 
 import java.util.Locale;
 
-public class TestDate {
+public class TestData {
     static Faker faker = new Faker(new Locale("ru"));
     public static String
             firstName = faker.name().firstName(),
@@ -17,7 +19,7 @@ public class TestDate {
     gander = "Male",
     phone = "9167838450",
     subject = "English",
-    hobbi = "Reading, Music",
+    hobby = "Reading, Music",
     fileName = "test.png",
     state = "NCR",
     city = "Delhi";

@@ -1,19 +1,24 @@
+package page;
+import page.components.CalendarComponent;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.selector.ByText;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
 public class RegPage {
+    public CalendarComponent calendarComponent = new CalendarComponent();
+
     private SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             PhoneInput = $("#userNumber"),
             resultTable = $("body > div.fade.modal.show"),
             emailImput = $("#userEmail"),
             subjectInput = $("#subjectsInput"),
-            hobbiOneInput = $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(2) > label"),
-            hobbiTwoInput = $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label"),
+            hobbyOneInput = $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(2) > label"),
+            hobbyTwoInput = $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label"),
             fileInput = $("#uploadPicture"),
             addressImput = $("#currentAddress"),
             stateInput = $("#react-select-3-input"),
@@ -24,12 +29,12 @@ public class RegPage {
         open("https://demoqa.com/automation-practice-form");
     }
 
-    public RegPage firstName(String value) {
+    public RegPage setFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
     }
 
-    public RegPage lastName(String value) {
+    public RegPage setLastName(String value) {
         lastNameInput.setValue(value);
         return this;
     }
@@ -38,53 +43,59 @@ public class RegPage {
         resultTable.shouldHave(Condition.text(value));
         return this;
     }
-    public RegPage phone(String value) {
+    public RegPage setPhone(String value) {
         PhoneInput.setValue(value);
         return this;
     }
-    public RegPage email(String value) {
+    public RegPage setEmail(String value) {
         emailImput.setValue(value);
 
         return this;
     }
-    public RegPage subject(String value) {
+    public RegPage setSubject(String value) {
         subjectInput.setValue(value).pressEnter();
 
         return this;
     }
-    public RegPage hobbiOne() {
-        hobbiOneInput.click();
+    public RegPage setHobbyOne() {
+        hobbyOneInput.click();
 
         return this;
     }
-    public RegPage hobbiTwo() {
-        hobbiTwoInput.click();
+    public RegPage setHobbyTwo() {
+        hobbyTwoInput.click();
 
         return this;
     }
-    public RegPage file (String value) {
+    public RegPage setFile (String value) {
         fileInput.uploadFromClasspath(value);
 
         return this;
     }
 
-    public RegPage address (String value) {
+    public RegPage setAddress (String value) {
         addressImput.setValue(value);
 
         return this;
     }
-    public RegPage state (String value) {
+    public RegPage setState (String value) {
         stateInput.setValue(value).pressEnter();
 
         return this;
     }
-    public RegPage city (String value) {
+    public RegPage setCity (String value) {
         cityInput.setValue(value).pressEnter();
 
         return this;
     }
-    CalendarComponent calendarComponent = new CalendarComponent();
+
+    public RegPage setGender (String value) {
+        $(new ByText(value)).click();
+
+
+        return this;
+    }
+
 }
 
 
-    //$("body > div.fade.modal.show").shouldHave(text("Nikita Eltsov"));

@@ -1,3 +1,5 @@
+package page.components;
+
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 import com.codeborne.selenide.selector.ByText;
@@ -18,7 +20,3 @@ public class CalendarComponent {
 }
 
 
-   // $("#dateOfBirthInput").click();
-       // $(".react-datepicker__year-select").selectOption("1994");
-       // $(".react-datepicker__month-select").selectOption("April");
-       // $(new ByText("16")).click();

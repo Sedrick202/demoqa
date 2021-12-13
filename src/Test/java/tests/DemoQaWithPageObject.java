@@ -28,7 +28,6 @@ public class DemoQaWithPageObject extends TestBase {
                 .clickSubmit();
 
 
-
         regPage.checkResult(TestData.firstName)
                 .checkResult(TestData.lastName)
                 .checkResult(TestData.email)
@@ -40,6 +39,8 @@ public class DemoQaWithPageObject extends TestBase {
                 .checkResult(TestData.fileName)
                 .checkResult(TestData.address)
                 .checkResult(TestData.state +" "+ TestData.city);
+        System.out.println("two");
+        System.out.println("three");
 
 
 

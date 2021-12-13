@@ -28,7 +28,6 @@ public class DemoQaWithPageObject extends TestBase {
                 .clickSubmit();
 
 
-
         regPage.checkResult(TestData.firstName)
                 .checkResult(TestData.lastName)
                 .checkResult(TestData.email)

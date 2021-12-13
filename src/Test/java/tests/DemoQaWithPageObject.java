@@ -40,6 +40,7 @@ public class DemoQaWithPageObject extends TestBase {
                 .checkResult(TestData.address)
                 .checkResult(TestData.state +" "+ TestData.city);
         System.out.println("two");
+        System.out.println("three");
 
 
 
